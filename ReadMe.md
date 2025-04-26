@@ -41,12 +41,13 @@
 
 ### 🏥 專業科目評測數據集
 
-| **MultiMedQA** | 醫療領域問答能力 | 醫療臨床 QA | 專業考試題、研究問答、民眾問答 | 結合 6 個公開資料集（MedQA 12.7k、MedMCQA 193k、PubMedQA 1k…）+ 3,173 題 HealthSearchQA；總 ~210k 題 [Nature](https://www.nature.com/articles/s41586-023-06291-2?utm_source=chatgpt.com)[Hugging Face](https://huggingface.co/collections/openlifescienceai/multimedqa-66098a5b280539974cefe485?utm_source=chatgpt.com) | 跨領域 QA；多軸人類評估（事實性、理解、風險、偏見）；MCQA + 自由文本 | MCQA 準確率＋人類評分軸平均分 |
-| --- | --- | --- | --- | --- | --- |
-| **FinBen** | 財務 NLP 全面評估 | 金融與經濟 | IE、文本分析、問答、生成、風險、預測、決策 | 36（或 42）資料集× 24 項任務，涵蓋 7（或 8）大類 [arXiv](https://arxiv.org/html/2402.12659v2?utm_source=chatgpt.com)[arXiv](https://arxiv.org/abs/2402.12659?utm_source=chatgpt.com) | 首次納入股票交易評估；代理人 + RAG 評估；雙語 (英／西)；開放程式庫与即時榜單 | 各項任務之準確率／F1／盈利指標等綜合指標 |
-| **LiveBench** | 蛋白質結構預測之迭代評價 | 生物信息學 | 同源建模與二級結構預測 | 每週新釋出之數百至千餘蛋白靶標；累計上千場測試 [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2373940/?utm_source=chatgpt.com)[Wikipedia](https://en.wikipedia.org/wiki/LiveBench?utm_source=chatgpt.com) | 持續自動化評估；即時比對新入庫 PDB 結構；多指標（RMSD、MAXSUB、對齊準確率）綜合排名 | 以結構重疊分數（RMSD、MAXSUB）與對齊精度排名 |
-| **Humanity’s Last Exam (HLE)** | 多模態前沿學術題庫答題準確度評估 | 學術知識綜合 | 閉式多選與填空題回答 | 2,500 道題，涵蓋 100+ 學科，多模態題型 10% 以上 [AGI Safe](https://agi.safe.ai/) | 私有測試集防止資料洩漏；題庫難度動態更新；結合圖文本題目 | 準確率及跨學科平均分比較 |
-| **GPQA** | 研究生級科學題（物理、化學、生物） | 數學推理 | 多選題 | 448 題 | 由領域專家出題，針對檢索與共現方法均答錯的困難題進行專項評估 [arXiv](https://arxiv.org/abs/2311.12022?utm_source=chatgpt.com) | 正答率與“Diamond”最難子集準確率 |
+| 資料集 | 測試重點 | 主要領域 | 核心任務類型 | 資料規模 | 獨特功能／技術亮點 | 評估指標 |
+| --- | --- | --- | --- | --- | --- | --- |
+| **MultiMedQA** | 醫療領域問答能力 | 醫療臨床 QA | 專業考試題、研究問答、民眾問答 | 結合 6 個公開資料集（MedQA 12.7k、MedMCQA 193k、PubMedQA 1k…）+ 3,173 題 HealthSearchQA；總 ~210k 題 [Nature](https://www.nature.com/articles/s41586-023-06291-2?utm_source=chatgpt.com) [Hugging Face](https://huggingface.co/collections/openlifescienceai/multimedqa-66098a5b280539974cefe485?utm_source=chatgpt.com) | 跨領域 QA；多軸人類評估（事實性、理解、風險、偏見）；MCQA + 自由文本 | MCQA 準確率＋人類評分軸平均分 |
+| **FinBen** | 財務 NLP 全面評估 | 金融與經濟 | IE、文本分析、問答、生成、風險、預測、決策 | 36（或 42）資料集× 24 項任務，涵蓋 7（或 8）大類 [arXiv](https://arxiv.org/html/2402.12659v2?utm_source=chatgpt.com) [arXiv](https://arxiv.org/abs/2402.12659?utm_source=chatgpt.com) | 首次納入股票交易評估；代理人 + RAG 評估；雙語 (英／西)；開放程式庫与即時榜單 | 各項任務之準確率／F1／盈利指標等綜合指標 |
+| **LiveBench** | 蛋白質結構預測之迭代評價 | 生物信息學 | 同源建模與二級結構預測 | 每週新釋出之數百至千餘蛋白靶標；累計上千場測試 [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2373940/?utm_source=chatgpt.com) [Wikipedia](https://en.wikipedia.org/wiki/LiveBench?utm_source=chatgpt.com) | 持續自動化評估；即時比對新入庫 PDB 結構；多指標（RMSD、MAXSUB、對齊準確率）綜合排名 | 以結構重疊分數（RMSD、MAXSUB）與對齊精度排名 |
+| **Humanity's Last Exam (HLE)** | 多模態前沿學術題庫答題準確度評估 | 學術知識綜合 | 閉式多選與填空題回答 | 2,500 道題，涵蓋 100+ 學科，多模態題型 10% 以上 [AGI Safe](https://agi.safe.ai/) | 私有測試集防止資料洩漏；題庫難度動態更新；結合圖文本題目 | 準確率及跨學科平均分比較 |
+| <span style="background-color: #FFCC66;">**GPQA**</span> | <span style="background-color: #FFCC66;">研究生級科學題（物理、化學、生物）</span> | <span style="background-color: #FFCC66;">數學推理</span> | <span style="background-color: #FFCC66;">多選題</span> | <span style="background-color: #FFCC66;">448 題</span> | <span style="background-color: #FFCC66;">由領域專家出題，針對檢索與共現方法均答錯的困難題進行專項評估 [arXiv](https://arxiv.org/abs/2311.12022?utm_source=chatgpt.com)</span> | <span style="background-color: #FFCC66;">正答率與"Diamond"最難子集準確率</span> |
 
 ### 🧮 數學與科學評測數據集
 
