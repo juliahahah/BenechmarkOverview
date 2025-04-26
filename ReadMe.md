@@ -1,4 +1,20 @@
-事實性（Factuality）評測數據集
+# AI 模型評測數據集總覽
+
+## 目錄
+- [💡 事實性評測數據集](#-事實性factuality評測數據集)
+- [📜 長上下文評測數據集](#-長上下文long-context評測數據集)
+- [🏥 專業科目評測數據集](#-專業科目評測數據集)
+- [🧮 數學與科學評測數據集](#-數學與科學評測數據集)
+- [🔍 推理評測數據集](#-推理reasoning評測數據集)
+- [📝 摘要評測數據集](#-摘要summarization評測數據集)
+- [🌐 語言理解與翻譯評測數據集](#-語言理解與翻譯評測數據集)
+- [🖼️ 圖像理解與多模態評測數據集](#️-圖像理解與多模態評測數據集)
+- [🎥 影片理解評測數據集](#-影片理解video-understanding評測數據集)
+- [🔊 音訊處理評測數據集](#-音訊處理audio評測數據集)
+- [💻 程式碼生成評測數據集](#-程式碼生成coding評測數據集)
+- [🛡️ 人工智慧的倫理與可靠性評測數據集](#️-人工智慧的倫理與可靠性評測數據集)
+
+### 💡 事實性（Factuality）評測數據集
 
 | 資料集 | 測試重點 | 主要領域 | 核心任務類型 | 資料規模 | 獨特功能／技術亮點 |
 | --- | --- | --- | --- | --- | --- |
@@ -15,28 +31,28 @@
 |  |  |  |  |  |  |
 | **Social IQA** | 測試社交情境中情感與行為推理能力 | 社交常識 | 3 選 1 多選題 | 38,000 題 [maartensap.com](https://maartensap.com/social-iqa/?utm_source=chatgpt.com)[ACL Anthology](https://aclanthology.org/D19-1454/?utm_source=chatgpt.com) | 提供多樣社交場景； mitigates 誤答樣式偏差的新框架 [ACL Anthology](https://aclanthology.org/D19-1454/?utm_source=chatgpt.com) |
 
-**長上下文（Long Context）評測數據集**
+### 📜 長上下文（Long Context）評測數據集
 
 | **NarrativeQA** | 測試對長篇故事（書籍／電影稿）的閱讀理解與敘事推理 [ACL Anthology](https://aclanthology.org/Q18-1023/?utm_source=chatgpt.com) | 長文本閱讀理解 | 自由格式 QA | 1,572 本書／劇本，約 45K QA 對 [MIT Press Direct](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00411/107386/Narrative-Question-Answering-with-Cutting-Edge?utm_source=chatgpt.com)[NLP-progress](https://nlpprogress.com/english/question_answering.html?utm_source=chatgpt.com) | 同時提供摘要與全文模式，強化綜合推理 [MIT Press Direct](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00411/107386/Narrative-Question-Answering-with-Cutting-Edge?utm_source=chatgpt.com)[ACL Anthology](https://aclanthology.org/Q18-1023/?utm_source=chatgpt.com) |
 | --- | --- | --- | --- | --- | --- |
 | **SCROLLS-Qasper & SCROLLS-Quality** | 測試長上下文下多任務性能：QA、NLI、摘要等 [GitHub](https://github.com/tau-nlp/scrolls?utm_source=chatgpt.com)[paperswithcode.com](https://paperswithcode.com/dataset/scrolls?utm_source=chatgpt.com) | 長文本綜合評測 | 抽取式/生成式 QA 及 NLI | QASPER: train 2,567/dev 1,726/test 1,399；Quality: 2,523/2,086/2,128 [TensorFlow](https://www.tensorflow.org/datasets/catalog/scrolls?utm_source=chatgpt.com) | 統一多任務標準化長文本基準，涵蓋多種任務 [ACL Anthology](https://aclanthology.org/2022.emnlp-main.823.pdf?utm_source=chatgpt.com) |
-| **XL-Sum** | 測試多語言新聞抽象式摘要能力 [ACL Anthology](https://aclanthology.org/2021.findings-acl.413/?utm_source=chatgpt.com) | 多語言摘要生成 | 多語種文章→摘要生成 | 約 1M 對，涵蓋 44 種語言 [arXiv](https://arxiv.org/abs/2106.13822?utm_source=chatgpt.com) | BBC 專業標注，跨 44 語言高質量抽象摘要 [paperswithcode.com](https://paperswithcode.com/dataset/xl-sum?utm_source=chatgpt.com) |
+| **XL-Sum** | 測試多語言新聞抽象式摘要能力 [ACL Anthology](https://aclanthology.org/2021.findings-acl.413/?utm_source=chatgpt.com) | 多語言摘要生成 | 多語種文章→摘要生成 | 約 1M 對，涵蓋 44 種語言 [arXiv](https://arxiv.org/abs/2106.13822?utm_source=chatgpt.com) | BBC 專業標註，跨 44 語言高質量抽象摘要 [paperswithcode.com](https://paperswithcode.com/dataset/xl-sum?utm_source=chatgpt.com) |
 | **LV-Eval** | 長文本單／多跳 QA 能力 | 長上下文理解 | 單跳 QA、Multi 跳 QA | 11 個雙語資料集，5 種長度等級 (16k–256k 字)；平均 102k 字 [arXiv](https://arxiv.org/abs/2402.05136?utm_source=chatgpt.com)[GitHub](https://github.com/infinigence/LVEval?utm_source=chatgpt.com) | 插入混淆事實；關鍵詞替換；關鍵詞召回指標；同 QA 不同文脈長度可控評估 |
 
-專業科目
+### 🏥 專業科目評測數據集
 
 | **MultiMedQA** | 醫療領域問答能力 | 醫療臨床 QA | 專業考試題、研究問答、民眾問答 | 結合 6 個公開資料集（MedQA 12.7k、MedMCQA 193k、PubMedQA 1k…）+ 3,173 題 HealthSearchQA；總 ~210k 題 [Nature](https://www.nature.com/articles/s41586-023-06291-2?utm_source=chatgpt.com)[Hugging Face](https://huggingface.co/collections/openlifescienceai/multimedqa-66098a5b280539974cefe485?utm_source=chatgpt.com) | 跨領域 QA；多軸人類評估（事實性、理解、風險、偏見）；MCQA + 自由文本 | MCQA 準確率＋人類評分軸平均分 |
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | **FinBen** | 財務 NLP 全面評估 | 金融與經濟 | IE、文本分析、問答、生成、風險、預測、決策 | 36（或 42）資料集× 24 項任務，涵蓋 7（或 8）大類 [arXiv](https://arxiv.org/html/2402.12659v2?utm_source=chatgpt.com)[arXiv](https://arxiv.org/abs/2402.12659?utm_source=chatgpt.com) | 首次納入股票交易評估；代理人 + RAG 評估；雙語 (英／西)；開放程式庫与即時榜單 | 各項任務之準確率／F1／盈利指標等綜合指標 |
 | **LiveBench** | 蛋白質結構預測之迭代評價 | 生物信息學 | 同源建模與二級結構預測 | 每週新釋出之數百至千餘蛋白靶標；累計上千場測試 [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2373940/?utm_source=chatgpt.com)[Wikipedia](https://en.wikipedia.org/wiki/LiveBench?utm_source=chatgpt.com) | 持續自動化評估；即時比對新入庫 PDB 結構；多指標（RMSD、MAXSUB、對齊準確率）綜合排名 | 以結構重疊分數（RMSD、MAXSUB）與對齊精度排名 |
-| **Humanity’s Last Exam (HLE)** | 多模態前沿學術題庫答題準確度評估 | 學術知識綜合 | 閉式多選與填空題回答 | 2,500 道題，涵蓋 100+ 學科，多模態題型 10% 以上 [AGI Safe](https://agi.safe.ai/) | 私有測試集防止資料洩漏；題庫難度動態更新；結合圖文本題目 | 準確率及跨學科平均分比較 |
-| **GPQA** | 研究生級科學題（物理、化學、生物） | 數學推理 | 多選題 | 448 題 | 由領域專家出題，針對檢索與共現方法均答錯的困難題進行專項評估 [arXiv](https://arxiv.org/abs/2311.12022?utm_source=chatgpt.com) | 正答率與“Diamond”最難子集準確率 |
+| **Humanity's Last Exam (HLE)** | 多模態前沿學術題庫答題準確度評估 | 學術知識綜合 | 閉式多選與填空題回答 | 2,500 道題，涵蓋 100+ 學科，多模態題型 10% 以上 [AGI Safe](https://agi.safe.ai/) | 私有測試集防止資料洩漏；題庫難度動態更新；結合圖文本題目 | 準確率及跨學科平均分比較 |
+| <span style="background-color: #FFCC66;">**GPQA**</span> | <span style="background-color: #FFCC66;">研究生級科學題（物理、化學、生物）</span> | <span style="background-color: #FFCC66;">數學推理</span> | <span style="background-color: #FFCC66;">多選題</span> | <span style="background-color: #FFCC66;">448 題</span> | <span style="background-color: #FFCC66;">由領域專家出題，針對檢索與共現方法均答錯的困難題進行專項評估 [arXiv](https://arxiv.org/abs/2311.12022?utm_source=chatgpt.com)</span> | <span style="background-color: #FFCC66;">正答率與"Diamond"最難子集準確率</span> |
 
-數學/科學數據
+### 🧮 數學與科學評測數據集
 
 | **GSM8K** | 測試小學數學多步推理解題能力 [arXiv](https://arxiv.org/abs/2110.14168?utm_source=chatgpt.com) | 數學推理 | 文字算數題解答 + 驗證器排序 | 8.5K 題（7.5K 訓練 + 1K 測試） [paperswithcode.com](https://paperswithcode.com/dataset/gsm8k?utm_source=chatgpt.com) | 高質量人工編題；2–8 步驟；引入 verifiers 提升策略 [arXiv](https://arxiv.org/abs/2110.14168?utm_source=chatgpt.com) |
 | --- | --- | --- | --- | --- | --- |
-| **MATH** | 測試競賽級數學問題解題與步驟生成 [arXiv](https://arxiv.org/abs/2103.03874?utm_source=chatgpt.com) | 數學問題解決 | 文字數學題 + Step-by-Step 解答 | 12,500 題（7.5K train + 5K test） [arXiv](https://arxiv.org/abs/2103.03874?utm_source=chatgpt.com) | 每題帶完整步驟解答；輔助 AMPS 預訓練資料集 [MATH-AI](https://mathai-iclr.github.io/papers/papers/MATHAI_24_paper.pdf?utm_source=chatgpt.com) |
+| <span style="background-color: #FFCC66;">**MATH**</span> | <span style="background-color: #FFCC66;">測試競賽級數學問題解題與步驟生成 [arXiv](https://arxiv.org/abs/2103.03874?utm_source=chatgpt.com)</span> | <span style="background-color: #FFCC66;">數學問題解決</span> | <span style="background-color: #FFCC66;">文字數學題 + Step-by-Step 解答</span> | <span style="background-color: #FFCC66;">12,500 題（7.5K train + 5K test） [arXiv](https://arxiv.org/abs/2103.03874?utm_source=chatgpt.com)</span> | <span style="background-color: #FFCC66;">每題帶完整步驟解答；輔助 AMPS 預訓練資料集 [MATH-AI](https://mathai-iclr.github.io/papers/papers/MATHAI_24_paper.pdf?utm_source=chatgpt.com)</span> |
 | **MMLU** | 測試模型在 57 學科多選題上的知識廣度與深度 [arXiv](https://arxiv.org/abs/2009.03300?utm_source=chatgpt.com) | 通用知識理解 | 57 科目多選題 | 約 16,000 題 [arXiv](https://arxiv.org/abs/2009.03300?utm_source=chatgpt.com) | 無需微調下檢測預訓練知識；多領域考試題 [arXiv](https://arxiv.org/abs/2009.03300?utm_source=chatgpt.com) |
 | **EXEQ-300k & OFEQ-10k** | 測試數學社群問題的標題生成能力 [clgiles.ist.psu.edu](https://clgiles.ist.psu.edu/pubs/AAAI20-QAmath.pdf?utm_source=chatgpt.com) | 文本摘要／標題生成 | 從詳細數學問句生成簡潔標題 | EXEQ-300k: 290,479；OFEQ-10k: 12,548 [paperswithcode.com](https://paperswithcode.com/dataset/exeq-300k?utm_source=chatgpt.com)[paperswithcode.com](https://paperswithcode.com/dataset/ofeq-10k?utm_source=chatgpt.com) | 同步處理文本與 LaTeX 方程；來源真實問答社群 [clgiles.ist.psu.edu](https://clgiles.ist.psu.edu/pubs/AAAI20-QAmath.pdf?utm_source=chatgpt.com) |
 | GaoKao-Benchmark | 中國高考及其他入學考試題目 | 教育測試 | 多選題 | ~22,000題 | 跨學科真實考試場景 |
@@ -44,14 +60,15 @@
 | **SCALAR** | 長文本科學文獻之引用邏輯推理評估 | 科學文獻理解 | 引用填空（cloze）式推理 | 基於 ICLR 2025 論文及其引用網絡，動態生成數千條測試 [arXiv](https://arxiv.org/abs/2502.13753) | 無需人工標註；難度可控；動態更新機制防止模型「見過即答」 |
 | **CMMLU** | 中文多任務知識推理 | 中文學科理解 | 多選題覆蓋 67 學科 | 1,528 題，涵蓋 67 個中小學至專業學科 [arXiv](https://arxiv.org/abs/2306.09212?utm_source=chatgpt.com)[GitHub](https://github.com/haonan-li/CMMLU/blob/master/README_EN.md?utm_source=chatgpt.com) | 包含中國特定科目；原創考題來源：模擬考、競賽題；85% 以上題目 OCR 自 PDF 提取，減少模型泄漏 |
 | **ARC Challenge** | 測試 Grade 3–9 科學考試多選題推理能力 | 科學與抽象推理 | 多選題 | 挑戰集 2,590、簡易集 5,197；共 7,787 題 [TensorFlow](https://www.tensorflow.org/datasets/catalog/ai2_arc?utm_source=chatgpt.com)[ar5iv](https://ar5iv.labs.arxiv.org/html/1803.05457?utm_source=chatgpt.com) | 挑戰集選自 IR 與 PMI 方法失敗題；附 14.3M 科學文本庫 [TensorFlow](https://www.tensorflow.org/datasets/catalog/ai2_arc?utm_source=chatgpt.com)[論文與代碼](https://paperswithcode.com/dataset/arc?utm_source=chatgpt.com) |
-| **OpenBookQA** | 開卷式小學科學問答 | 科學常識推理 | 多選題 | 5,957 題（4,957 train / 500 dev / 500 test） [論文與代碼](https://paperswithcode.com/dataset/openbookqa?utm_source=chatgpt.com) | 模仿開卷考試；原創 1,326 條科學事實與 5,167 條群眾常識庫 [論文與代碼](https://paperswithcode.com/dataset/openbookqa?utm_source=chatgpt.com) |
+| **OpenBookQA** | 開卷式小學科學問答 | 科學常識推理 | 多選題 | 5,957 題（4,957 train / 500 dev / 500 test） [論文與代碼](https://paperswithcode.com/dataset/openbookqa?utm_source=chatgpt.com) | 模仿開卷考試；原創 1,326 條科學事實與 5,167 梭群眾常識庫 [論文與代碼](https://paperswithcode.com/dataset/openbookqa?utm_source=chatgpt.com) |
 | **DROP** | 閱讀理解＋離散計算（計數、排序、加減） | 數學推理 | 問答（QA） | 96K QAs，6.7K 段落 | 對抗式收集，需解析多重參照並做離散運算，測試更綜合段落理解 [arXiv](https://arxiv.org/abs/1903.00161?utm_source=chatgpt.com) |
 
-## 推理 (Reasoning) 評測數據集
+### 🔍 推理（Reasoning）評測數據集
 
 | 基準名稱 | 測試重點 | 主要領域 | 核心任務類型 | 數據規模 | 獨特功能/技術亮點 |
 | --- | --- | --- | --- | --- | --- |
-| **BBH** | 聚焦最具挑戰性任務，測量模型當前極限 | 高階推理與任務解決 | 23 大類任務（27 子任務） | 約數千題 | 精選先前模型表現不及人類平均分之困難任務 |
+| <span style="background-color: #FFCC66;">**IFEval**</span> | <span style="background-color: #FFCC66;">評估模型對複雜指令的遵循能力</span> | <span style="background-color: #FFCC66;">指令遵循</span> | <span style="background-color: #FFCC66;">多步骤任務执行</span> | <span style="background-color: #FFCC66;">約 700 條高質量測試樣本 [arXiv](https://arxiv.org/abs/2311.07911)</span> | <span style="background-color: #FFCC66;">6 種複雜任務類型；精確制定指令遵循規則；細粒度人類標註；針對易出錯場景設計；可執行自動評估</span> |
+| <span style="background-color: #FFCC66;">**BBH**</span> | <span style="background-color: #FFCC66;">聚焦最具挑戰性任務，測量模型當前極限</span> | <span style="background-color: #FFCC66;">高階推理與任務解決</span> | <span style="background-color: #FFCC66;">23 大類任務（27 子任務）</span> | <span style="background-color: #FFCC66;">約數千題</span> | <span style="background-color: #FFCC66;">精選先前模型表現不及人類平均分之困難任務</span> |
 | CLRS | 演算法推理 | 算法 | 輸入輸出對＋推理步驟 | 30種算法大量輸入輸出對 | 提供詳細中間步驟 |
 | ProofWriter | 自然語言證明生成 | 邏輯推理 | 證明生成 | ~845,000證明三元組 | 多步邏輯證明＋反向解釋 |
 | Fermi Problems | 費米估算問題 | 數值推理 | 估算任務 | 250題 | 多步估算過程 |
@@ -63,14 +80,14 @@
 | **ANLI** | 測試對抗式自然語言推理能力 | 自然語言推理 | 句子蘊涵判斷（三分類：Entail/Neutral/Contradiction） | 訓練 162,865 + 驗證/測試約 3,200 範例 [TensorFlow](https://www.tensorflow.org/datasets/catalog/anli?utm_source=chatgpt.com) | 人機迭代收集難例，三輪不同對抗者設計 [Stanford University](https://web.stanford.edu/class/cs224u/2021/slides/cs224u-2021-nli-part2-handout.pdf?utm_source=chatgpt.com)[ACL Anthology](https://aclanthology.org/2022.scil-1.3.pdf?utm_source=chatgpt.com) |
 | **WinoGrande** | 評測代詞消解與常識推理 | 代詞解析 | 填空式多選題 | 44,000 題 | 基於 Winograd Schema 擴展規模；防止原始題目飽和 |
 
-## 摘要 (Summarization) 評測數據集
+### 📝 摘要（Summarization）評測數據集
 
 | 基準名稱 | 測試重點 | 主要領域 | 核心任務類型 | 數據規模 | 獨特功能/技術亮點 |
 | --- | --- | --- | --- | --- | --- |
-| WikiLingua | 跨語言 How-to 摘要 | 摘要 | 跨語言摘要 | ~770,000對（18語） | 圖像對齊標準 |
+| WikiLingua | 跨語言 How-to 摘要 | 摘要 | 跨模態推理 | ~770,000對（18語） | 圖像對齊標準 |
 | XSum | 單句極限摘要 | 摘要 | 單句新聞摘要 | 226,711篇 BBC 文章 | 即時新聞單句摘要 |
 
-### 語言理解與翻譯相關評測
+### 🌐 語言理解與翻譯評測數據集
 
 | 名稱 | 測試重點 | 主要領域 | 核心任務類型 | 數據規模 | 獨特功能 / 技術亮點 |
 | --- | --- | --- | --- | --- | --- |
@@ -78,7 +95,7 @@
 | **WMT23** | 機器翻譯 | 多語言翻譯 | 翻譯品質與LLM比較 | 多語言多方向 | LLM在翻譯領域的首次深入分析 |
 | **FRMT** | 少樣本翻譯 | 區域語系 | Few-shot 翻譯 | 多個語區語言 | 支援低資源語言 Few-shot |
 | **TydiQA** | QA系統評估 | 多語言 | 資訊檢索型問答 | 11語言 | 多語言問答、Typologically多樣語系 |
-| **MGSM** | 多語鏈式推理 | 數學推理 | Chain-of-thought | 多語數學題 | 多語言 + CoT能力評估 |
+| <span style="background-color: #FFCC66;">**MGSM**</span> | <span style="background-color: #FFCC66;">多語鏈式推理</span> | <span style="background-color: #FFCC66;">數學推理</span> | <span style="background-color: #FFCC66;">Chain-of-thought</span> | <span style="background-color: #FFCC66;">多語數學題</span> | <span style="background-color: #FFCC66;">多語言 + CoT能力評估</span> |
 | **MMLU** | 學術知識 | 廣泛學科 | 多選題理解 | 57科目，約14k題 | 模擬人類考試難度分布 |
 | **NTREX-128** | 翻譯 | 多語新聞 | MT品質評估 | 128語言 | 首個大規模新聞參考集 |
 | **FLORES-200** | 機器翻譯 | 多語新聞 | 翻譯能力 | 200語言 | 支援極低資源語言、統一格式 |
@@ -88,22 +105,23 @@
 
 ---
 
-### 🖼 圖像理解與多模態評測
+### 🖼️ 圖像理解與多模態評測數據集
 
 | 名稱 | 測試重點 | 主要領域 | 核心任務類型 | 數據規模 | 獨特功能 / 技術亮點 |
 | --- | --- | --- | --- | --- | --- |
+| <span style="background-color: #FFCC66;">**MUSR**</span> | <span style="background-color: #FFCC66;">多感官理解與空間推理能力</span> | <span style="background-color: #FFCC66;">多模態理解與推理</span> | <span style="background-color: #FFCC66;">跨模態空間關係與物體屬性推理</span> | <span style="background-color: #FFCC66;">包含約 10,000 個多感官場景，涵蓋視覺、聽覺和文本 [arXiv](https://arxiv.org/abs/2401.06209)</span> | <span style="background-color: #FFCC66;">獨創的多感官理解框架；同時測試空間關係識別、視聽整合推理；包含人造與現實場景；可控複雜度評估；突破單一模態侷限</span> |
 | **MMMU** | 多學科圖文推理 | 多模態知識 | 跨模態推理 | 約100k問答 | 專業學科+圖像+文字整合 |
 | **TextVQA** | 圖中文字問答 | 圖像理解 | 圖文VQA | 45k圖像 | 強調閱讀圖中文字 |
 | **DocVQA** | 文件理解 | 文檔圖像 | VQA | 約50k問題 | 文件格式理解與提問 |
 | **ChartQA** | 圖表理解 | 統計圖表 | QA + 邏輯 | 多種圖表類型 | 視覺 + 邏輯推理整合 |
 | **InfographicVQA** | 資訊圖理解 | 海報、圖解 | QA | 多樣資訊圖 | 多視覺元素分析 |
-| **MathVista** | 圖文數學推理 | 數學 + 視覺 | 推理 / QA | 多題型視覺題 | 數學推理 + 視覺融合 |
+| **MathVista** | 圖文數學推理 | 數学 + 視覺 | 推理 / QA | 多題型視覺題 | 數學推理 + 視覺融合 |
 | **AI2D** | 圖示推理 | 教育/科學 | 圖文理解 | 15k張圖示 | 評估圖示推理能力 |
 | **VQAv2** | 視覺問答 | 圖像理解 | QA | 約265k圖問對 | 增強V問題比重 |
 | **XM3600** | 多語多模態 | 跨語+圖文 | QA / Caption | 3600樣本，20語 | 多語多模態 |
 | **Memecap** | Meme 理解 | 社交媒體 | Caption / 解釋 | 約9k meme圖 | 對 meme 文字 + 圖融合理解 |
 
-### 🎥 影片理解（Video Understanding）評測資料集
+### 🎥 影片理解（Video Understanding）評測數據集
 
 | 資料集名稱 | 測試重點 | 主要領域 | 核心任務類型 | 資料規模與技術亮點 |
 | --- | --- | --- | --- | --- |
@@ -135,15 +153,15 @@
 | **APPS** | 程式設計挑戰能力評估 | Python 程式設計 | 程式碼生成與測試 |  |  |
 | **DynaCode** | 動態複雜度感知之程式碼生成評估 | 程式碼生成 | LLM 生成嵌套函式程式碼 | 可生成最高 1.89 億 道唯一程式問題，涵蓋 4 種複雜度單元 × 16 種呼叫圖 [arXiv](https://arxiv.org/abs/2503.10452?utm_source=chatgpt.com) | 動態資料集避免抄襲；複雜度與呼叫圖結合度量；可視化回歸性能降幅隨複雜度上升 |
 | **MBPP** | 測試 AI 解決入門級程式設計任務能力 | 程式碼生成 | Python 入門程式設計問題 | 約 1,000 題 | 眾包題目；專為初學者設計 |
-| **HumanEval** | 評估 LLM 生成程式碼功能正確性 | 程式碼生成 | Python 函數實現 + 單元測試 | 164 題 | 手工設計多元單元測試用例；函數簽名 + 文檔字符串 |
-| **HumanEval+** | 進階程式碼生成＋連續推理 | 編程生成 | Self-invoking 代碼生成 | 164 題擴展版 | 延伸為需調用自生成功能的“自觸發”題，考查模型調用自身函數能力 [arXiv](https://arxiv.org/html/2412.21199v1?utm_source=chatgpt.com) |
+| <span style="background-color: #FFCC66;">**HumanEval**</span> | <span style="background-color: #FFCC66;">評估 LLM 生成程式碼功能正確性</span> | <span style="background-color: #FFCC66;">程式碼生成</span> | <span style="background-color: #FFCC66;">Python 函數實現 + 單元測試</span> | <span style="background-color: #FFCC66;">164 題</span> | <span style="background-color: #FFCC66;">手工設計多元單元測試用例；函數簽名 + 文檔字符串</span> |
+| **HumanEval+** | 進階程式碼生成＋連續推理 | 編程生成 | Self-invoking 代碼生成 | 164 題擴展版 | 延伸為需調用自生成功能的"自觸發"題，考查模型調用自身函數能力 [arXiv](https://arxiv.org/html/2412.21199v1?utm_source=chatgpt.com) |
 | **MultiPL-E** | 多語言程式碼生成評估 | 編程生成 | 跨語言單元測試程式生成 | Python 基準題翻譯至 18–22 種語言 | 一鍵將 HumanEval/MBPP 平行轉換到多語言，衡量多語言泛化能力 [arXiv](https://arxiv.org/abs/2208.08227?utm_source=chatgpt.com) |
 | **API-Bank** | LLM 的 API 使用與調用規劃 | 工具使用 | 多回合 API 調用規劃與執行 | 314 對話、753 呼叫； 1,888 訓練對話 | 涵蓋 73 類 API 工具，並提供訓練集＋評估系統，測試規劃與執行能力 [arXiv](https://arxiv.org/abs/2304.08244?utm_source=chatgpt.com) |
 | **APIBench** | LLM API 推薦與調用 | 工具使用 | 單步 API 調用 | 1,600+ APIs | 源自 Gorilla，包含多個開源／TorchHub／TensorHub API，減少幻覺 [arXiv](https://arxiv.org/abs/2305.15334?utm_source=chatgpt.com) |
 | **Nexus Function Calling** | 零樣本／多步函數調用 | 工具使用 | 單步／並行／嵌套函數呼叫 | 9 類任務、840 測試用例 | 評估零樣本下模型生成單步、並行及嵌套調用能力 [Medium](https://medium.com/data-science/ai-agents-the-intersection-of-tool-calling-and-reasoning-in-generative-ai-ff268eece443?utm_source=chatgpt.com) |
 | **BFCL** | 通用函數呼叫能力 | 工具使用 | 單步／多步／多回合函數呼叫 | ~2K 問題－函數配對 | 執行可執行代碼、涵蓋多語言、多場景； V3 添加多回合評估 [Gorilla](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html?utm_source=chatgpt.com) |
 
-人工智慧的倫理與可靠性
+### 🛡️ 人工智慧的倫理與可靠性評測數據集
 
 | 名稱 | 測試重點 | 主要領域 | 核心任務類型 | 數據規模 | 獨特功能 / 技術亮點 |
 | --- | --- | --- | --- | --- | --- |
